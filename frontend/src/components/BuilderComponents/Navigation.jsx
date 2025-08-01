@@ -20,7 +20,6 @@ const Navigation = ({
       padding: '15px 20px', 
       color: textColor || 'white',
       borderRadius: '8px',
-      margin: '10px 0',
       position: 'relative'
     }}>
       <div style={{ 

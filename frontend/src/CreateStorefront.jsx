@@ -12,76 +12,76 @@ import './App.css';
 
 // Register components with Builder.io for edit mode
 Builder.registerComponent(Header, {
-  name: 'Header',
-  inputs: [
-    { name: 'title', type: 'text', defaultValue: 'Welcome' },
-    { name: 'subtitle', type: 'text', defaultValue: 'Custom header content' },
-    { name: 'backgroundColor', type: 'color', defaultValue: '#f8f9fa' },
-    { name: 'textColor', type: 'color', defaultValue: '#333' },
-    { name: 'logo', type: 'url', defaultValue: '' },
-    { name: 'showLogo', type: 'boolean', defaultValue: false }
-  ]
+    name: 'Header',
+    inputs: [
+        { name: 'title', type: 'text', defaultValue: 'Welcome' },
+        { name: 'subtitle', type: 'text', defaultValue: 'Custom header content' },
+        { name: 'backgroundColor', type: 'color', defaultValue: '#f8f9fa' },
+        { name: 'textColor', type: 'color', defaultValue: '#333' },
+        { name: 'logo', type: 'url', defaultValue: '' },
+        { name: 'showLogo', type: 'boolean', defaultValue: false }
+    ]
 });
 
 Builder.registerComponent(Navigation, {
-  name: 'Navigation',
-  inputs: [
-    { name: 'brand', type: 'text', defaultValue: 'My Store' },
-    { name: 'menuItems', type: 'list', defaultValue: ['Home', 'Products', 'Contact'] },
-    { name: 'backgroundColor', type: 'color', defaultValue: '#007bff' },
-    { name: 'textColor', type: 'color', defaultValue: 'white' },
-    { name: 'logo', type: 'url', defaultValue: '' },
-    { name: 'showLogo', type: 'boolean', defaultValue: false }
-  ]
+    name: 'Navigation',
+    inputs: [
+        { name: 'brand', type: 'text', defaultValue: 'My Store' },
+        { name: 'menuItems', type: 'list', defaultValue: ['Home', 'Products', 'Contact'] },
+        { name: 'backgroundColor', type: 'color', defaultValue: '#007bff' },
+        { name: 'textColor', type: 'color', defaultValue: 'white' },
+        { name: 'logo', type: 'url', defaultValue: '' },
+        { name: 'showLogo', type: 'boolean', defaultValue: false }
+    ]
 });
 
 Builder.registerComponent(Hero, {
-  name: 'Hero',
-  inputs: [
-    { name: 'title', type: 'text', defaultValue: 'Welcome to Our Store' },
-    { name: 'subtitle', type: 'text', defaultValue: 'Discover amazing products' },
-    { name: 'buttonText', type: 'text', defaultValue: 'Shop Now' },
-    { name: 'buttonLink', type: 'url', defaultValue: '' },
-    { name: 'backgroundImage', type: 'url', defaultValue: '' },
-    { name: 'backgroundColor', type: 'color', defaultValue: '' },
-    { name: 'textColor', type: 'color', defaultValue: 'white' },
-    { name: 'buttonColor', type: 'color', defaultValue: 'white' },
-    { name: 'buttonTextColor', type: 'color', defaultValue: '#667eea' },
-    { name: 'height', type: 'number', defaultValue: 300 },
-    { name: 'showButton', type: 'boolean', defaultValue: true }
-  ]
+    name: 'Hero',
+    inputs: [
+        { name: 'title', type: 'text', defaultValue: 'Welcome to Our Store' },
+        { name: 'subtitle', type: 'text', defaultValue: 'Discover amazing products' },
+        { name: 'buttonText', type: 'text', defaultValue: 'Shop Now' },
+        { name: 'buttonLink', type: 'url', defaultValue: '' },
+        { name: 'backgroundImage', type: 'url', defaultValue: '' },
+        { name: 'backgroundColor', type: 'color', defaultValue: '' },
+        { name: 'textColor', type: 'color', defaultValue: 'white' },
+        { name: 'buttonColor', type: 'color', defaultValue: 'white' },
+        { name: 'buttonTextColor', type: 'color', defaultValue: '#667eea' },
+        { name: 'height', type: 'number', defaultValue: 300 },
+        { name: 'showButton', type: 'boolean', defaultValue: true }
+    ]
 });
 
 Builder.registerComponent(ProductGrid, {
-  name: 'ProductGrid',
-  inputs: [
-    { name: 'title', type: 'text', defaultValue: 'Our Products' },
-    { name: 'products', type: 'list', defaultValue: [] },
-    { name: 'columns', type: 'number', defaultValue: 4 },
-    { name: 'backgroundColor', type: 'color', defaultValue: 'transparent' },
-    { name: 'textColor', type: 'color', defaultValue: '#333' },
-    { name: 'cardBackgroundColor', type: 'color', defaultValue: 'white' },
-    { name: 'showTitle', type: 'boolean', defaultValue: true },
-    { name: 'showPrice', type: 'boolean', defaultValue: true },
-    { name: 'showDescription', type: 'boolean', defaultValue: true },
-    { name: 'showButton', type: 'boolean', defaultValue: true }
-  ]
+    name: 'ProductGrid',
+    inputs: [
+        { name: 'title', type: 'text', defaultValue: 'Our Products' },
+        { name: 'products', type: 'list', defaultValue: [] },
+        { name: 'columns', type: 'number', defaultValue: 4 },
+        { name: 'backgroundColor', type: 'color', defaultValue: 'transparent' },
+        { name: 'textColor', type: 'color', defaultValue: '#333' },
+        { name: 'cardBackgroundColor', type: 'color', defaultValue: 'white' },
+        { name: 'showTitle', type: 'boolean', defaultValue: true },
+        { name: 'showPrice', type: 'boolean', defaultValue: true },
+        { name: 'showDescription', type: 'boolean', defaultValue: true },
+        { name: 'showButton', type: 'boolean', defaultValue: true }
+    ]
 });
 
 Builder.registerComponent(Footer, {
-  name: 'Footer',
-  inputs: [
-    { name: 'companyName', type: 'text', defaultValue: 'Your Store' },
-    { name: 'email', type: 'text', defaultValue: 'info@store.com' },
-    { name: 'phone', type: 'text', defaultValue: '' },
-    { name: 'address', type: 'text', defaultValue: '' },
-    { name: 'backgroundColor', type: 'color', defaultValue: '#333' },
-    { name: 'textColor', type: 'color', defaultValue: 'white' },
-    { name: 'links', type: 'list', defaultValue: [] },
-    { name: 'socialLinks', type: 'list', defaultValue: [] },
-    { name: 'showLogo', type: 'boolean', defaultValue: false },
-    { name: 'logo', type: 'url', defaultValue: '' }
-  ]
+    name: 'Footer',
+    inputs: [
+        { name: 'companyName', type: 'text', defaultValue: 'Your Store' },
+        { name: 'email', type: 'text', defaultValue: 'info@store.com' },
+        { name: 'phone', type: 'text', defaultValue: '' },
+        { name: 'address', type: 'text', defaultValue: '' },
+        { name: 'backgroundColor', type: 'color', defaultValue: '#333' },
+        { name: 'textColor', type: 'color', defaultValue: 'white' },
+        { name: 'links', type: 'list', defaultValue: [] },
+        { name: 'socialLinks', type: 'list', defaultValue: [] },
+        { name: 'showLogo', type: 'boolean', defaultValue: false },
+        { name: 'logo', type: 'url', defaultValue: '' }
+    ]
 });
 
 // Main CreateStorefront Component
@@ -134,6 +134,7 @@ export default function CreateStorefront() {
     };
 
     const handleDeviceToggle = (selectedDevice) => {
+        console.log('Selected device:', selectedDevice);
         setDevice(selectedDevice);
     };
 
@@ -142,7 +143,7 @@ export default function CreateStorefront() {
     };
 
     if (loading) {
-    return (
+        return (
             <div className="d-flex justify-content-center align-items-center min-vh-100">
                 <div className="text-center">
                     <div className="spinner-border text-primary mb-3" role="status">
@@ -150,9 +151,9 @@ export default function CreateStorefront() {
                     </div>
                     <p>Loading storefront...</p>
                 </div>
-        </div>
-    );
-}
+            </div>
+        );
+    }
 
     return (
         <div className="storefront-pro flex-row d-flex min-vh-100 bg-body-tertiary">
