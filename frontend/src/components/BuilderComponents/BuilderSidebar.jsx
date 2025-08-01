@@ -31,19 +31,20 @@ const BuilderSidebar = ({ isEditing, onToggleEditMode, onSave, saved, tenantInfo
                     {isEditing ? 'Exit Edit Mode' : 'Enter Edit Mode'}
                 </button>
 
-                <button className="btn btn-success w-100" onClick={onSave}>
-                    Save Storefront
-                </button>
-
-                {saved && (
-                    <div className="alert alert-success mt-3 py-2 text-center w-100">
-                        Storefront saved successfully!
-                    </div>
-                )}
             </div>
 
             {/* Component Library */}
             <ComponentLibrary />
+
+            <button className="btn btn-success w-100 mt-2" onClick={onSave}>
+                Save Storefront
+            </button>
+
+            {saved && (
+                <div className="alert alert-success mt-3 py-2 text-center w-100">
+                    Storefront saved successfully!
+                </div>
+            )}
         </aside>
     );
 };

@@ -118,22 +118,19 @@ const PreviewArea = ({
       <div className="w-100 d-flex align-items-center justify-content-between mb-4">
         <h2 className="fw-bold mb-0">Live Preview</h2>
         <div className="device-frame-options d-flex gap-2">
-          <button
-            className={`btn ${
-              device === "desktop" ? "btn-primary" : "btn-outline-primary"
-            }`}
-            onClick={() => onDeviceToggle("desktop")}
-          >
-            Desktop
-          </button>
-          <button
-            className={`btn ${
-              device === "mobile" ? "btn-primary" : "btn-outline-primary"
-            }`}
-            onClick={() => onDeviceToggle("mobile")}
-          >
-            Mobile
-          </button>
+
+            <button className={device === 'desktop' ? 'primary-btn' : 'secondary-btn'} onClick={() => onDeviceToggle('desktop')}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-window-desktop" viewBox="0 0 16 16">
+                    <path d="M3.5 11a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
+                    <path d="M2.375 1A2.366 2.366 0 0 0 0 3.357v9.286A2.366 2.366 0 0 0 2.375 15h11.25A2.366 2.366 0 0 0 16 12.643V3.357A2.366 2.366 0 0 0 13.625 1zM1 3.357C1 2.612 1.611 2 2.375 2h11.25C14.389 2 15 2.612 15 3.357V4H1zM1 5h14v7.643c0 .745-.611 1.357-1.375 1.357H2.375A1.366 1.366 0 0 1 1 12.643z" />
+                </svg>
+            </button>
+            <button className={device === 'mobile' ? 'primary-btn' : 'secondary-btn'} onClick={() => onDeviceToggle('mobile')}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-phone" viewBox="0 0 16 16">
+                    <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                </svg>
+            </button>
         </div>
       </div>
 
