@@ -16,7 +16,7 @@ This platform enables tenants to create and customize their own storefronts usin
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/princid/white-label-platform.git
+git clone https://github.com/princid/White_Label_Platform.git
 cd white-label-platform
 ```
 
