@@ -3,7 +3,6 @@ import React from "react";
 const ProductGrid = ({
 	title,
 	products = [],
-	columns = 4,
 	backgroundColor,
 	textColor,
 	cardBackgroundColor,
@@ -11,6 +10,7 @@ const ProductGrid = ({
 	showPrice = true,
 	showDescription = true,
 	showButton = true,
+	device = 'desktop',
 }) => {
 	// Default products if none provided
 	const defaultProducts = [
@@ -50,6 +50,16 @@ const ProductGrid = ({
 
 	const displayProducts = products.length > 0 ? products : defaultProducts;
 
+	// Determine column class based on device view
+	const getColumnClass = () => {
+		console.log('ProductGrid Device:', device);
+		if (device === 'mobile') {
+			return 'col-12 col-lg-12'; // Full width on mobile view
+		} else {
+			return 'col-12 col-lg-3'; // 4 columns on desktop view
+		}
+	};
+
 	return (
 		<div
 			style={{
@@ -81,7 +91,7 @@ const ProductGrid = ({
 				{displayProducts.map((product, index) => (
 					<div
 						key={product.id || index}
-						className={`col-6 col-sm-6 col-md-${12/Math.min(columns, 4)} col-lg-${12/columns}`}
+						className={getColumnClass()}
 					>
 						<div
 							style={{
@@ -99,11 +109,9 @@ const ProductGrid = ({
 							className="product-card h-100"
 							onMouseEnter={(e) => { 
 								e.target.style.transform = "translateY(-4px)";
-								e.target.style.boxShadow = "0 8px 25px rgba(0,0,0,0.15)";
 							}}
 							onMouseLeave={(e) => {
 								e.target.style.transform = "translateY(0)";
-								e.target.style.boxShadow = "0 2px 8px rgba(0,0,0,0.1)";
 							}}
 						>
 						<div

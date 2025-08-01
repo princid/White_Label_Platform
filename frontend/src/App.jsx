@@ -31,7 +31,7 @@ export default function App() {
 			setTenantId(tenantId);
 			setProducts([]);
 		} catch (err) {
-			setError('Failed to create store.');
+			setError('Failed to create store.', err.message || 'Unknown error');
 		}
 		setLoading(false);
 	}
@@ -43,7 +43,7 @@ export default function App() {
 			const products = await listProducts(tenantId);
 			setProducts(products);
 		} catch (err) {
-			setError('Failed to load products.');
+			setError('Failed to load products.', err.message || 'Unknown error');
 		}
 		setLoading(false);
 	}
@@ -64,7 +64,7 @@ export default function App() {
 			await addProduct(tenantId, { name, price });
 			await loadProducts();
 		} catch (err) {
-			setError('Failed to add product.');
+			setError('Failed to add product.', err.message || 'Unknown error');
 		}
 		setLoading(false);
 	}
@@ -114,7 +114,7 @@ export default function App() {
 						</div>
 
 						<div className="mt-4">
-							<button className='primary-btn' onClick={() => navigate('/create-storefront/' + tenantId)}>
+							<button className='primary-btn w-100' onClick={() => navigate('/create-storefront/' + tenantId)}>
 								Create your Storefront
 							</button>
 						</div>

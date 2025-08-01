@@ -732,3 +732,22 @@
     gap: 20px !important;
   }
 }
+
+/* Navigation responsive styles */
+.desktop-menu {
+  display: flex !important;
+}
+
+.mobile-menu-button {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none !important;
+  }
+  
+  .mobile-menu-button {
+    display: block !important;
+  }
+}
