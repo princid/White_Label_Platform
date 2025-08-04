@@ -18,7 +18,7 @@ const ProductGrid = ({
 			id: 1,
 			name: "Product 1",
 			price: 29.99,
-			description: "Classicproduct",
+			description: "Classic product",
 			image:
 				"https://www.lo10m.com/cdn/shop/products/air-jordan-1-low-reverse-black-toe-w-lo10m-10_1500x.jpg?v=1716820975",
 		},
